@@ -7,7 +7,8 @@ var ghPages = require('gulp-gh-pages');
 // add tag then publish to npm and push to git
 module.exports = function(gulp, config) {
   gulp.task('publish:tag', function(done) {
-    var pkg = require('./package.json');
+    var pkg = config.pkg;
+    // TODO: require(module.parent + './package.json')
     var v = 'v' + pkg.version;
     var message = 'Release ' + v;
 
@@ -16,7 +17,7 @@ module.exports = function(gulp, config) {
         throw err;
       }
 
-      git.push('origin', config.release.branch || 'master', function(err) {
+      git.push('origin', (config.git && config.git.branch) || 'master', function(err) {
         if (err) {
           throw err;
         }
@@ -33,13 +34,13 @@ module.exports = function(gulp, config) {
 
   var releaseTasks = ['publish:tag', 'publish:npm'];
 
-  if (config.example) {
-    gulp.task('publish:examples', ['build:examples'], function() {
-      return gulp.src(config.example.dist + '/**/*')
-        .pipe(ghPages());
+  if (config.ghPages) {
+    gulp.task('publish:docs', ['build'], function() {
+      return gulp.src(config.ghPages.src)
+        .pipe(ghPages(config.ghPages.options || {}));
     });
 
-    releaseTasks.push('publish:examples');
+    releaseTasks.push('publish:docs');
   }
 
   gulp.task('release', releaseTasks);

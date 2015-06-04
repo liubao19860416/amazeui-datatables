@@ -6,8 +6,16 @@ var docUtil = require('amazeui-doc-util');
 var runSequence = require('run-sequence');
 
 var config = {
+  pkg: require('./package.json'),
+
+  // release task
   ghPages: {
     src: 'dist/**/*'
+  },
+
+  // remote branch
+  git: {
+    branch: 'master'
   },
 
   browserSync: {
@@ -68,8 +76,8 @@ var config = {
 
 require('./tasks')(gulp, config);
 
-gulp.task('default', function(cb) {
+gulp.task('build', function(cb) {
   runSequence('clean', ['browserify', 'less', 'markdown'], cb);
 });
 
-gulp.task('dev', ['default', 'server']);
+gulp.task('dev', ['build', 'server']);
