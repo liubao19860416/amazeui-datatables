@@ -1,0 +1,60 @@
+{
+  "name": "amazeui-datatables",
+  "version": "0.0.1",
+  "description": "jQuery tags input plugin based on Amaze UI.",
+  "main": "lib/amazeui.datatables.js",
+  "style": "dist/amazeui.datatables.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amazeui/datatables.git"
+  },
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "datatables",
+    "table",
+    "jquery-plugin"
+  ],
+  "author": "harvesthq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amazeui/datatables/issues"
+  },
+  "homepage": "https://github.com/amazeui/datatables",
+  "licenses": "MIT",
+  "devDependencies": {
+    "amazeui-doc-util": "latest",
+    "browser-sync": "^2.3.0",
+    "browserify": "^10.2.3",
+    "browserify-shim": "^3.8.7",
+    "datatables": "^1.10.7",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-csso": "^0.2.9",
+    "gulp-gh-pages": "^0.4.0",
+    "gulp-git": "^1.2.4",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "markit-json": "^0.2.1",
+    "object-assign": "^2.0.0",
+    "run-sequence": "^1.0.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "dependencies": {
+    "amazeui": "^2.4.0",
+    "jquery": "^2.1.4"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+}
