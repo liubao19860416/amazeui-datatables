@@ -1,0 +1,731 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI DataTables 使用演示 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://a.static.amazeui.org/assets/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.4.0/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://a.static.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.4.0/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.datatables.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI DataTables</h1>
+    <p class="">jQuery DataTables 插件 Amaze UI 集成。</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/datatables">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/datatables">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/datatables/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container">
+    <h2><a name="%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA" class="anchor" href="#%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA"><span class="header-link"></span></a>使用演示</h2><hr>
+<h3><a name="%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="header-link"></span></a>基本使用</h3><div class="doc-example"><table class="am-table am-table-striped am-table-bordered am-table-compact" id="example">
+  <thead>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr class="odd gradeX">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 4.0</td>
+    <td>Win 95+</td>
+    <td class="center"> 4</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="even gradeC">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.0</td>
+    <td>Win 95+</td>
+    <td class="center">5</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.5</td>
+    <td>Win 95+</td>
+    <td class="center">5.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 6</td>
+    <td>Win 98+</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet Explorer 7</td>
+    <td>Win XP SP2+</td>
+    <td class="center">7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>AOL browser (AOL desktop)</td>
+    <td>Win XP</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.5</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 2.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 3.0</td>
+    <td>Win 2k+ / OSX.3+</td>
+    <td class="center">1.9</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Camino 1.0</td>
+    <td>OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Camino 1.5</td>
+    <td>OSX.3+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape 7.2</td>
+    <td>Win 95+ / Mac OS 8.6-9.2</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape Browser 8</td>
+    <td>Win 98SE+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape Navigator 9</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.0</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.1</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.1</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.2</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.2</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.3</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.3</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.4</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.4</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.5</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.6</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.7</td>
+    <td>Win 98+ / OSX.1+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.8</td>
+    <td>Win 98+ / OSX.1+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Seamonkey 1.1</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Epiphany 2.20</td>
+    <td>Gnome</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 1.2</td>
+    <td>OSX.3</td>
+    <td class="center">125.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 1.3</td>
+    <td>OSX.3</td>
+    <td class="center">312.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 2.0</td>
+    <td>OSX.4+</td>
+    <td class="center">419.3</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 3.0</td>
+    <td>OSX.4+</td>
+    <td class="center">522.1</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>OmniWeb 5.5</td>
+    <td>OSX.4+</td>
+    <td class="center">420</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>iPod Touch / iPhone</td>
+    <td>iPod</td>
+    <td class="center">420.1</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Webkit</td>
+    <td>S60</td>
+    <td>S60</td>
+    <td class="center">413</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 7.0</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 7.5</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 8.0</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 8.5</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.0</td>
+    <td>Win 95+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.2</td>
+    <td>Win 88+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.5</td>
+    <td>Win 88+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera for Wii</td>
+    <td>Wii</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Nokia N800</td>
+    <td>N800</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Presto</td>
+    <td>Nintendo DS browser</td>
+    <td>Nintendo DS</td>
+    <td class="center">8.5</td>
+    <td class="center">C/A<sup>1</sup></td>
+  </tr>
+  <tr class="gradeC">
+    <td>KHTML</td>
+    <td>Konqureror 3.1</td>
+    <td>KDE 3.1</td>
+    <td class="center">3.1</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeA">
+    <td>KHTML</td>
+    <td>Konqureror 3.3</td>
+    <td>KDE 3.3</td>
+    <td class="center">3.3</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>KHTML</td>
+    <td>Konqureror 3.5</td>
+    <td>KDE 3.5</td>
+    <td class="center">3.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeX">
+    <td>Tasman</td>
+    <td>Internet Explorer 4.5</td>
+    <td>Mac OS 8-9</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="gradeC">
+    <td>Tasman</td>
+    <td>Internet Explorer 5.1</td>
+    <td>Mac OS 7.6-9</td>
+    <td class="center">1</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeC">
+    <td>Tasman</td>
+    <td>Internet Explorer 5.2</td>
+    <td>Mac OS 8-X</td>
+    <td class="center">1</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Misc</td>
+    <td>NetFront 3.1</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Misc</td>
+    <td>NetFront 3.4</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeX">
+    <td>Misc</td>
+    <td>Dillo 0.8</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="gradeX">
+    <td>Misc</td>
+    <td>Links</td>
+    <td>Text only</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="gradeX">
+    <td>Misc</td>
+    <td>Lynx</td>
+    <td>Text only</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="gradeC">
+    <td>Misc</td>
+    <td>IE Mobile</td>
+    <td>Windows Mobile 6</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeC">
+    <td>Misc</td>
+    <td>PSP browser</td>
+    <td>PSP</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="gradeU">
+    <td>Other browsers</td>
+    <td>All others</td>
+    <td>-</td>
+    <td class="center">-</td>
+    <td class="center">U</td>
+  </tr>
+  </tbody>
+</table></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-table am-table-striped am-table-bordered am-table-compact"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"example"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Rendering engine<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Browser<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Platform(s)<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Engine version<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Grade<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tfoot</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Rendering engine<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Browser<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Platform(s)<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Engine version<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Grade<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tfoot</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"odd gradeX"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Trident<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Internet
+      Explorer 4.0<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Win 95+<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"center"</span>&gt;</span> 4<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"center"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"even gradeC"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Trident<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Internet
+      Explorer 5.0<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Win 95+<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"center"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"center"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- more data --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">&lt;script&gt;
+  $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#example'</span>).DataTable();
+  });
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span></code></pre></div><h3><a name="%E5%93%8D%E5%BA%94%E5%BC%8F" class="anchor" href="#%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="header-link"></span></a>响应式</h3><ul>
+<li>引入 <code>dataTables.responsive.min.js</code></li>
+<li>设置 table 宽度 <code>100%</code> 并添加禁止换行 class <code>.am-text-nowrap</code></li>
+<li>初始化时假如 <code>responsive</code> 参数</li>
+</ul>
+<div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>
+  <span class="hljs-attribute">width</span>=<span class="hljs-value">"100%"</span>
+  <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap"</span>
+  <span class="hljs-attribute">id</span>=<span class="hljs-value">"example-r"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'#example-r'</span>).DataTable({
+  responsive: <span class="hljs-literal">true</span>,
+  dom: <span class="hljs-string">'ti'</span>
+});</code></pre></div><div class="doc-example"><table
+  width="100%"
+  class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap"
+  id="example-r">
+  <thead>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr class="odd gradeX">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 4.0</td>
+    <td>Win 95+</td>
+    <td class="center"> 4</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="even gradeC">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.0</td>
+    <td>Win 95+</td>
+    <td class="center">5</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.5</td>
+    <td>Win 95+</td>
+    <td class="center">5.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 6</td>
+    <td>Win 98+</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet Explorer 7</td>
+    <td>Win XP SP2+</td>
+    <td class="center">7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>AOL browser (AOL desktop)</td>
+    <td>Win XP</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.5</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 2.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 3.0</td>
+    <td>Win 2k+ / OSX.3+</td>
+    <td class="center">1.9</td>
+    <td class="center">A</td>
+  </tr>
+  </tbody>
+  </table></div><h3><a name="%E4%B8%AD%E6%96%87%E6%8E%92%E5%BA%8F" class="anchor" href="#%E4%B8%AD%E6%96%87%E6%8E%92%E5%BA%8F"><span class="header-link"></span></a>中文排序</h3><p>中文排序基于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare"><code>localeCompare</code></a> 实现，
+在不同浏览器上会有差异。如果需要更一致的排序，可以通过后端输出拼音进行排序。</p>
+<p><strong>实现步骤：</strong></p>
+<ol>
+<li><p>引入<a href="https://github.com/DataTables/Plugins/blob/master/sorting/chinese-string.js">中文排序插件</a>，或者把以下代码粘贴到初始化函数之前：</p>
+<div class="doc-code demo-highlight"><pre><code class="javascript">jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+  <span class="hljs-string">"chinese-string-asc"</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s1, s2</span>) </span>{
+    <span class="hljs-keyword">return</span> s1.localeCompare(s2);
+  },
+
+  <span class="hljs-string">"chinese-string-desc"</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s1, s2</span>) </span>{
+    <span class="hljs-keyword">return</span> s2.localeCompare(s1);
+  }
+});</code></pre></div></li>
+<li><p>初始化的时候指定哪些栏目是中文字符（<a href="https://datatables.net/reference/option/columnDefs"><code>columnDefs</code> 文档</a>）：</p>
+<div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'#sorting-chinese'</span>).dataTable({
+  columnDefs: [
+    {type: <span class="hljs-string">'chinese-string'</span>, targets: <span class="hljs-string">'_all'</span>}
+  ]
+});</code></pre></div></li>
+</ol>
+<div class="doc-example"><table class="am-table am-table-bordered am-table-striped" id="sorting-chinese">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>公司</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>比尔盖茨</td>
+      <td>微软</td>
+    </tr>
+    <tr>
+      <td>乔布斯</td>
+      <td>苹果</td>
+    </tr>
+    <tr>
+      <td>类布斯科夫斯基</td>
+      <td>出粮</td>
+    </tr>
+    <tr>
+      <td>贝索斯</td>
+      <td>亚马逊</td>
+    </tr>
+  </tbody>
+</table></div><script src="../amazeui.datatables.js"></script>
+<script src="../dataTables.responsive.min.js"></script>
+<script>
+  jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+    "chinese-string-asc": function(s1, s2) {
+      return s1.localeCompare(s2);
+    },
+
+    "chinese-string-desc": function(s1, s2) {
+      return s2.localeCompare(s1);
+    }
+  });
+
+  $(function() {
+    $('#example').DataTable();
+    $('#example-r').DataTable({
+      responsive: true,
+      dom: 'ti'
+    });
+
+    $('#sorting-chinese').dataTable({
+      columnDefs: [
+        {type: 'chinese-string', targets: '_all'}
+      ]
+    });
+  });
+</script>
+
+
+    <nav class="amp-pager">
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="javascript: void(0)" data-am-popover="{content: 'Amaze UI 交流 Q 群：374946651'}" title="Amaze UI 用户交流群" target="_blank"><span class="am-icon-qq"></span></a></li><li><a href="http://weibo.com/allmobilize" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://a.static.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://a.static.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>
