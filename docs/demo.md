@@ -5,6 +5,8 @@ title: Amaze UI DataTables 使用演示
 ## 使用演示
 ---
 
+### 基本使用
+
 `````html
 <table class="am-table am-table-striped am-table-bordered am-table-compact" id="example">
   <thead>
@@ -483,9 +485,214 @@ title: Amaze UI DataTables 使用演示
 </script>
 ```
 
+### 响应式
+
+- 引入 `dataTables.responsive.min.js`
+- 设置 table 宽度 `100%` 并添加禁止换行 class `.am-text-nowrap`
+- 初始化时假如 `responsive` 参数
+
+```html
+<table
+  width="100%"
+  class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap"
+  id="example-r">
+</table>
+```
+
+```js
+$('#example-r').DataTable({
+  responsive: true,
+  dom: 'ti'
+});
+```
+
+`````html
+<table
+  width="100%"
+  class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap"
+  id="example-r">
+  <thead>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <th>Rendering engine</th>
+    <th>Browser</th>
+    <th>Platform(s)</th>
+    <th>Engine version</th>
+    <th>Grade</th>
+  </tr>
+  </tfoot>
+  <tbody>
+  <tr class="odd gradeX">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 4.0</td>
+    <td>Win 95+</td>
+    <td class="center"> 4</td>
+    <td class="center">X</td>
+  </tr>
+  <tr class="even gradeC">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.0</td>
+    <td>Win 95+</td>
+    <td class="center">5</td>
+    <td class="center">C</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 5.5</td>
+    <td>Win 95+</td>
+    <td class="center">5.5</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>Internet
+      Explorer 6</td>
+    <td>Win 98+</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet Explorer 7</td>
+    <td>Win XP SP2+</td>
+    <td class="center">7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Trident</td>
+    <td>AOL browser (AOL desktop)</td>
+    <td>Win XP</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.5</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 2.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+  </tr>
+  <tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 3.0</td>
+    <td>Win 2k+ / OSX.3+</td>
+    <td class="center">1.9</td>
+    <td class="center">A</td>
+  </tr>
+  </tbody>
+  </table>
+`````
+
+
+### 中文排序
+
+中文排序基于 [`localeCompare`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) 实现，
+在不同浏览器上会有差异。如果需要更一致的排序，可以通过后端输出拼音进行排序。
+
+**实现步骤：**
+
+1. 引入[中文排序插件](https://github.com/DataTables/Plugins/blob/master/sorting/chinese-string.js)，或者把以下代码粘贴到初始化函数之前：
+
+  ```js
+    jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+      "chinese-string-asc": function(s1, s2) {
+        return s1.localeCompare(s2);
+      },
+
+      "chinese-string-desc": function(s1, s2) {
+        return s2.localeCompare(s1);
+      }
+    });
+  ```
+
+2. 初始化的时候指定哪些栏目是中文字符（[`columnDefs` 文档](https://datatables.net/reference/option/columnDefs)）：
+
+  ```js
+    $('#sorting-chinese').dataTable({
+      columnDefs: [
+        {type: 'chinese-string', targets: '_all'}
+      ]
+    });
+  ```
+
+`````html
+<table class="am-table am-table-bordered am-table-striped" id="sorting-chinese">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>公司</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>比尔盖茨</td>
+      <td>微软</td>
+    </tr>
+    <tr>
+      <td>乔布斯</td>
+      <td>苹果</td>
+    </tr>
+    <tr>
+      <td>类布斯科夫斯基</td>
+      <td>出粮</td>
+    </tr>
+    <tr>
+      <td>贝索斯</td>
+      <td>亚马逊</td>
+    </tr>
+  </tbody>
+</table>
+`````
+
 <script src="../amazeui.datatables.js"></script>
+<script src="../dataTables.responsive.min.js"></script>
 <script>
+  jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+    "chinese-string-asc": function(s1, s2) {
+      return s1.localeCompare(s2);
+    },
+
+    "chinese-string-desc": function(s1, s2) {
+      return s2.localeCompare(s1);
+    }
+  });
+
   $(function() {
     $('#example').DataTable();
+    $('#example-r').DataTable({
+      responsive: true,
+      dom: 'ti'
+    });
+
+    $('#sorting-chinese').dataTable({
+      columnDefs: [
+        {type: 'chinese-string', targets: '_all'}
+      ]
+    });
   });
 </script>

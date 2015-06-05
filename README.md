@@ -36,3 +36,10 @@
   });
   ```
 
+## 功能增强
+
+### 扩展
+
+- **固定表头**：[文档](https://www.datatables.net/extensions/fixedheader/) | [下载](https://www.datatables.net/download/#FixedHeader)
+- **固定列**：[文档](https://www.datatables.net/extensions/fixedcolumns/) | [下载](https://www.datatables.net/download/#FixedColumns)
+- **[响应式表格](http://datatables.net/extensions/responsive/)**

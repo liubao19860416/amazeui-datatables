@@ -30,7 +30,8 @@ var config = {
   less: {
     src: './less/amazeui.datatables.less',
     autoPrefixer: docUtil.autoprefixerBrowsers,
-    dist: './dist'
+    dist: './dist',
+    watches: './less/**/*.less'
   },
 
   // docs:md
@@ -71,13 +72,18 @@ var config = {
   },
 
   // clean path
-  clean: 'dist'
+  clean: 'dist',
+
+  uglify: {
+    src: './plugins/*.js',
+    dist: './dist'
+  }
 };
 
 require('./tasks')(gulp, config);
 
 gulp.task('build', function(cb) {
-  runSequence('clean', ['browserify', 'less', 'markdown'], cb);
+  runSequence('clean', ['uglify', 'browserify', 'less', 'markdown'], cb);
 });
 
 gulp.task('dev', ['build', 'server']);

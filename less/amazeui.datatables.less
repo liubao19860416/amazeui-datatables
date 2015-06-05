@@ -2,7 +2,7 @@
 @import "../node_modules/amazeui/less/mixins";
 
 
-.am-datatables-hd {
+.am-datatable-hd {
   label {
     font-weight: normal;
   }
@@ -10,7 +10,7 @@
   margin-bottom: 10px;
 }
 
-.am-datatables-filter {
+.am-datatable-filter {
   text-align: right;
 
   input {
@@ -318,13 +318,17 @@ div.FixedHeader_Cloned table {
 
 
 // below table footer
-.am-datatables-pager {
+.am-datatable-pager {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.am-datatables-info {
+.am-datatable-info {
   padding-top: 6px;
   color: @gray;
   font-size: 1.4rem;
 }
+
+
+// plugins
+@import "import/responsive";
