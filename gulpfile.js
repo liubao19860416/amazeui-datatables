@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var docUtil = require('amazeui-doc-util');
 var runSequence = require('run-sequence');
+var tasks = require('amazeui-gulp-tasks');
 
 var config = {
   pkg: require('./package.json'),
@@ -80,7 +81,8 @@ var config = {
   }
 };
 
-require('./tasks')(gulp, config);
+// init tasks
+tasks(gulp, config);
 
 gulp.task('build', function(cb) {
   runSequence('clean', ['uglify', 'browserify', 'less', 'markdown'], cb);
