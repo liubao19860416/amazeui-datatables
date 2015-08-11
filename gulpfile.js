@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
 var docUtil = require('amazeui-doc-util');
 var runSequence = require('run-sequence');
 var tasks = require('amazeui-gulp-tasks');

@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 (function (global){
 /*! DataTables Amaze UI 2.x integration */
 
@@ -9,8 +9,8 @@
 
 'use strict';
 
-var $ = (typeof window !== "undefined" ? window.jQuery : typeof global !== "undefined" ? global.jQuery : null);
-var DataTable = require('datatables');
+var $ = (typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null);
+var DataTable = _dereq_('datatables');
 
 // language
 // https://github.com/DataTables/Plugins/blob/master/i18n/Chinese.lang
@@ -229,7 +229,7 @@ if (DataTable.TableTools) {
 module.exports = DataTable;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"datatables":2}],2:[function(require,module,exports){
+},{"datatables":2}],2:[function(_dereq_,module,exports){
 (function (global){
 /*! DataTables 1.10.7
  * ©2008-2014 SpryMedia Ltd - datatables.net/license
@@ -268,7 +268,7 @@ module.exports = DataTable;
 	}
     else if ( typeof exports === 'object' ) {
         // Node/CommonJS
-        module.exports = factory( (typeof window !== "undefined" ? window.jQuery : typeof global !== "undefined" ? global.jQuery : null) );
+        module.exports = factory( (typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null) );
     }
 	else if ( jQuery && !jQuery.fn.dataTable ) {
 		// Define using browser globals otherwise
